@@ -27,9 +27,9 @@
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
 }
-@media (max-width: 50vh) {
+@media (max-width: 100vh) {
   header {
-    max-height: 200vw;
+    max-height: 100vw;
   }
   #board {
     margin-top: -1rem !important;
