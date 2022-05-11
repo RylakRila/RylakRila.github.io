@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://bl3301files.storage.live.com/y4mNE4JDE_0hTRFUR6qYNCWGZiRuUFpuea5MOU1jBnl1ByMzAFWaZ0VpIJPEve6Hb9E0qxWLoruMwZ6A7a2xEFbkAmGKYH9JSHeHLF6oo4kfRKNxMNZ2RgNKe7CBTDTGU8BRKyJUfPWGb9K89fG02IKIBdVp4_n0ABqJ1d9Yuh_k44HSzhVa_IGDqRAxCTD1zP8?width=723&height=372&cropmode=none">
 <meta property="article:published_time" content="2021-12-22T18:59:00.000Z">
-<meta property="article:modified_time" content="2022-04-29T03:44:27.972Z">
+<meta property="article:modified_time" content="2022-05-11T11:56:06.652Z">
 <meta property="article:author" content="Rerto6">
 <meta property="article:tag" content="New Vegas">
 <meta property="article:tag" content="安装指南">
@@ -206,7 +206,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      4.4k 字
+      4.5k 字
     </span>
   
 
@@ -279,7 +279,9 @@
 <td>西数SN550 250G</td>
 </tr>
 </tbody></table>
-<p>打上ENB和高清化补丁后，只在麦卡伦营地的广场，视角指向中间有很多屏幕的柱子时，才会有明显掉帧。</p>
+<p><del>打上ENB和高清化补丁后，只在麦卡伦营地的广场，视角指向中间有很多屏幕的柱子时，才会有明显掉帧。</del></p>
+<p>参考该教程（<a target="_blank" rel="noopener" href="https://tieba.baidu.com/p/7195663681?pid=137515179510&cid=143646136755#143646136755">URL</a>）修改<code>.ini</code>文件可改善该问题。</p>
+<p>体感最重要的是将<code>NVTF.ini</code>中的<code>bModifyDirectXBehavior</code>和<code>bAlternateGTCFix</code>改成1</p>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>以下记录较为详细的步骤</p>
 <h2 id="ENB的安装"><a href="#ENB的安装" class="headerlink" title="ENB的安装"></a>ENB的安装</h2><blockquote>
 <p>某些ENB可能需要修改FalloutNVLauncher.exe的设置（详情查阅自己选择的ENB的文档）。同时，在2021年12月的节点，只有三种汉化选择：<em>天邈</em>、<em>民间</em>和<em>两种混合汉化</em>。在你要纯打<em>天邈汉化</em>的情况下，请将汉化步骤放在ENB后，因为其在安装时会修改FalloutNVLauncher.exe，同时steam的检测机制会让你在修改后无法打开该exe。</p>
@@ -380,7 +382,7 @@
 <li>替换了游戏原来的<code>binkw32.dll</code>，并在根目录创建Backup文件夹放原版<code>binkw32.dll</code></li>
 <li>usub文件夹放着汉化组logo文件，主菜单logo汉化视频，以及字库（?)</li>
 </ul>
-<p>除此之外，天邈汉化还会在根目录生成<code>FalloutNVCN.esp</code>、<code>PreoderCN.esp</code>、<code>GunRunnersArsenalCN.esp</code>这三个esp文件。</p>
+<p>除此之外，天邈汉化还会在<code>Data</code>目录生成<code>FalloutNVCN.esp</code>、<code>PreoderCN.esp</code>、<code>GunRunnersArsenalCN.esp</code>这三个esp文件。</p>
 </li>
 <li><p>安装民间汉化</p>
 <p>民间汉化会替换data文件夹下所有的.esm文件、生成一个Texture和Meshes文件夹用于ui汉化。同时还会在根目录生成一个FNVTools.exe的文件，可以删除，前者的esm文件请做好英文原版备份以便恢复。</p>
