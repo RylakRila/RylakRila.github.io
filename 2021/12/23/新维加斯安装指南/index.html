@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://bl6pap004files.storage.live.com/y4mJxdxsp0tWzKJCVFnKwlli8a_lDNl1LYC9QEDeOjvKTwcYbGcMvYdnWbMllGCmuvIcXOlanyACau5Eb6-Amtf4sVaffWpDb7UDvcXWdZrCtP3hpzjEuVyBdQZ_Bto2qdRHCQhV114znEcecc0LePM7Jh4RnzC0cGq9WV_8-LqVGIy7jhIovg4qunJKl0ni4BK?width=723&height=372&cropmode=none">
 <meta property="article:published_time" content="2021-12-23T07:59:00.000Z">
-<meta property="article:modified_time" content="2023-01-15T03:38:44.999Z">
+<meta property="article:modified_time" content="2023-12-05T12:11:41.472Z">
 <meta property="article:author" content="Rerto6">
 <meta property="article:tag" content="New Vegas">
 <meta property="article:tag" content="安装指南">
@@ -206,7 +206,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      4.5k 字
+      3.4k 字
     </span>
   
 
@@ -215,7 +215,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      38 分钟
+      29 分钟
     </span>
   
 
@@ -283,56 +283,9 @@
 <p>参考该教程（<a target="_blank" rel="noopener" href="https://tieba.baidu.com/p/7195663681?pid=137515179510&cid=143646136755#143646136755">URL</a>）修改<code>.ini</code>文件可改善该问题。</p>
 <p>体感最重要的是将<code>NVTF.ini</code>中的<code>bModifyDirectXBehavior</code>和<code>bAlternateGTCFix</code>改成1</p>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>以下记录较为详细的步骤</p>
-<h2 id="ENB的安装"><a href="#ENB的安装" class="headerlink" title="ENB的安装"></a>ENB的安装</h2><blockquote>
-<p>某些ENB可能需要修改FalloutNVLauncher.exe的设置（详情查阅自己选择的ENB的文档）。同时，在2021年12月的节点，只有三种汉化选择：<em>天邈</em>、<em>民间</em>和<em>两种混合汉化</em>。在你要纯打<em>天邈汉化</em>的情况下，请将汉化步骤放在ENB后，因为其在安装时会修改FalloutNVLauncher.exe，同时steam的检测机制会让你在修改后无法打开该exe。</p>
-</blockquote>
-<p>此处本人选择<strong>Rudy ENB</strong>：<a target="_blank" rel="noopener" href="https://www.nexusmods.com/newvegas/mods/55076">https://www.nexusmods.com/newvegas/mods/55076</a></p>
-<p>请仔细阅读Readme文件并按照其中的指南进行安装。</p>
-<p>此处做简单翻译（2021.01.18&#x2F;4.0版本）：</p>
-<blockquote>
-<p>第一步：</p>
-<ul>
-<li>下载最新的ENB：<a target="_blank" rel="noopener" href="http://enbdev.com/mod_falloutnv_v0451.htm">http://enbdev.com/mod_falloutnv_v0451.htm</a>，点击底部的黑色箭头</li>
-<li>解压后，你会发现有两个文件夹：<code>WrapperVersion</code>和<code>InjectorVersion</code>。</li>
-<li>只复制<code>WrapperVersion</code>文件夹中的<code>d3d9.dll</code>，<code>enbhost.exe</code>，<code>enblocal.ini</code>到你的游戏根目录（steam\steamapps\common\Fallout New Vegas).</li>
-</ul>
-<p>第二步：</p>
-<ul>
-<li>下载Rudy ENB</li>
-<li>解压</li>
-<li>选择一个版本（其实一般只有一个版本可选:sweat:）</li>
-<li>选择<code>[ to Fallout New Vegas Folder ]</code>文件夹下的所有文件，并复制到游戏根目录</li>
-</ul>
-<p>第三步：</p>
-<ul>
-<li><p>根据喜好编辑<code>enblocal.ini</code>，不会编辑的可以回到rudy ENB文件夹并把<code>!!! enblocal.ini_You should adapt it to your own hardware</code>文件夹下的<code>enblocal.ini</code>覆盖游戏根目录的文件。</p>
-</li>
-<li><p>所有人都<strong>必须</strong>把<code>enblocal.ini</code>和自己的硬件信息对上号！！（其实就是把<code>VideoMemorySizeMb</code>这项设置成自己的显存大小）</p>
-</li>
-<li><p>本ENB可以选择三个不同的LUT bitmaps，在ENB UI右面板的的enbeffect.fx栏下。</p>
-</li>
-</ul>
-<p>默认键位：</p>
-<p>Shift+Enter - ENB UI开关</p>
-<p>Shift+F12 - ENB开关</p>
-<p>Insert - 截图键</p>
-<p>几个要点：</p>
-<ul>
-<li>不要开启FalloutNVLauncher.exe下的antialiasing（抗锯齿）</li>
-<li>关闭steam社区界面</li>
-<li>必须打开HDR</li>
-<li>如果水有问题，尝试关闭<code>FalloutPrefs.ini</code>下的<code>bUseWaterDisplacements</code>选项（设置为0）</li>
-<li>如果武器可以看到详细的阴影轮廓，尝试关闭<code>enblocal.ini</code>下的<code>EnableAccumulativeAA</code>，并且一定记得关闭steam社区界面</li>
-</ul>
-<p>保证以下<code>FalloutPrefs.ini</code>里的选项（在<code>[Display]</code>栏）和你文件里的一致</p>
-<ul>
-<li><code>iMultiSample=0</code></li>
-<li><code>bUseWaterDisplacements=0</code></li>
-</ul>
-<p>牢记MO2有自己的<code>fallout.ini</code>和<code>falloutprefs.ini</code>。</p>
-<p>如果物体的透明度有问题（特别是在高尔夫营地的房子墙壁上），尝试关闭<code>enblocal.ini</code>下的<code>FixTransparencyBugs</code>。</p>
-<p>一些用户可能有在闪烁的光下fps下降的问题，尝试关闭<code>enblocal.ini</code>下的<code>ReduceSystemMemoryUsage</code></p>
-</blockquote>
+<h2 id="ENB的安装"><a href="#ENB的安装" class="headerlink" title="ENB的安装"></a><del>ENB的安装</del></h2><p>别用ENB了，用ReShade吧。</p>
+<p>前往<a target="_blank" rel="noopener" href="https://reshade.me/#download">Home (reshade.me)</a>，点第一个绿色按钮下载就行。安装的时候记得选DirectX 9和新维加斯。具体可参考这个视频 <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=GZaAsQxoedU">How to install ReShade in Fallout New Vegas - YouTube</a></p>
+<p>然后去Nexus搜索ReShade，找个你喜欢的预设（.ini）。进游戏按Home键进入面板，加载预设就行。</p>
 <h2 id="优化、前置的安装"><a href="#优化、前置的安装" class="headerlink" title="优化、前置的安装"></a>优化、前置的安装</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv13735215">https://www.bilibili.com/read/cv13735215</a> 遵循该指南，安装必备的优化插件。</p>
 <p><em>由于该教程内提供的文件已经过时，建议是根据里面提供的mod列表自行去N网上下载安装 (2022&#x2F;3&#x2F;30)。</em></p>
 <p>推荐使用<code>Mod organizer 2</code>，请自行学习该工具的安装教程，教程很多这里不再赘述。</p>
