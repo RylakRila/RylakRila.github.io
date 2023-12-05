@@ -24,8 +24,10 @@
 <meta property="og:description" content="PS1 Problem 1 断言：令 \(n, \ c, \ p \in \mathbb{Z}\)，且 \(c\) 整除 \(10^p\)。则有 \(c\) 整除 \(n\) 当且仅当 \(c\) 整除 \(n\) 的最后 \(p\) 位数字的值。 名词解释：  当且仅当：如果 \(p \Rightarrow q\) 且 \(q \Rightarrow p\)，则可得 \(p \L">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-05T12:26:22.000Z">
-<meta property="article:modified_time" content="2023-12-05T14:22:32.907Z">
+<meta property="article:modified_time" content="2023-12-05T14:49:42.018Z">
 <meta property="article:author" content="Rerto6">
+<meta property="article:tag" content="数学">
+<meta property="article:tag" content="证明">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -202,7 +204,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3.4k 字
+      1.8k 字
     </span>
   
 
@@ -211,7 +213,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      28 分钟
+      15 分钟
     </span>
   
 
@@ -269,9 +271,9 @@ q\)</span>，其中 <span class="math inline">\(\Leftrightarrow\)</span>
 <col style="width: 3%" />
 <col style="width: 10%" />
 <col style="width: 8%" />
-<col style="width: 6%" />
+<col style="width: 8%" />
 <col style="width: 16%" />
-<col style="width: 33%" />
+<col style="width: 32%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -287,7 +289,9 @@ class="math inline">\(c\)</span></th>
 10^p?\)</span></th>
 <th style="text-align: center;"><span class="math inline">\(c \mid
 n?\)</span></th>
-<th style="text-align: center;">n的最后p位数</th>
+<th style="text-align: center;"><span
+class="math inline">\(n\)</span>的最后<span
+class="math inline">\(p\)</span>位数</th>
 <th style="text-align: center;"><span class="math inline">\(c \mid
 n\)</span> 的最后 <span class="math inline">\(p\)</span> 位数？</th>
 <th style="text-align: center;"><span class="math inline">\(c \mid n
@@ -347,166 +351,42 @@ class="math inline">\(80\)</span></td>
 </tbody>
 </table>
 <h4 id="证明">证明</h4>
-<table>
-<colgroup>
-<col style="width: 5%" />
-<col style="width: 36%" />
-<col style="width: 57%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;"></th>
-<th style="text-align: center;">Mathematical Statement</th>
-<th style="text-align: center;">Reason this Statement is True</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\(\Rightarrow\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(n\)</span> 可被写作 <span
-class="math inline">\(d_k
-d_{k-1}...d_{p}...d_1d_0\)</span> 的形式，<br>每个 <span
-class="math inline">\(d_i \in \{ x  \vert  0 \leq x \leq 9
-\}\)</span></td>
-<td style="text-align: center;">根据我们记录数字的方法</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\(\Rightarrow\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(n =
-d_0+10^1d_1+...+ 10^{p}{d}_p+...+10^kd_k\)</span></td>
-<td style="text-align: center;">根据十位数的定义</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\(\Rightarrow\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(n =
-d_0+10^1d_1+...+ 10^{p}({d}_p+...+10^{k-p}d_k)\)</span></td>
-<td style="text-align: center;">因式分解 <span
-class="math inline">\(10^p\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\(\Rightarrow\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(n =
-d_0+10^1d_1+...+ (c \cdot k)({d}_p+...+10^{k-p}d_k)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\((c \mid
-10^p) \Rightarrow (10^p = c \cdot k, \ k \in \mathbb{Z})\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\(\Rightarrow\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\dfrac{n}{c}
-= \dfrac{d_0+10^1d_1+...+10^{p-1}d_{p-1}}{c}+
-k({d}_p+...+10^{k-p}d_k)\)</span></td>
-<td style="text-align: center;">等式两边除以 <span
-class="math inline">\(c\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\(\Rightarrow\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\dfrac{n}{c}
-= \dfrac{d_0+10^1d_1+...+10^{p-1}d_{p-1}}{c}+t, \ t \in
-\mathbb{Z}\)</span></td>
-<td style="text-align: center;">因为整数的积与和为整数，且 <span
-class="math inline">\(k, 10^{k-p}, d_p,...,d_k \in
-\mathbb{Z}\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\(\Rightarrow\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(\dfrac{n}{c}\)</span> 为整数 <span
-class="math inline">\(\Leftrightarrow\)</span> <span
-class="math inline">\(\frac{d_0+10^1d_1+...+10^{p-1}d_{p-1}}{c}+t\)</span> 为整数</td>
-<td style="text-align: center;">因为等式两边相等</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\(\Rightarrow\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(\dfrac{n}{c}\)</span> 为整数 <span
-class="math inline">\(\Leftrightarrow\)</span> <span
-class="math inline">\(\frac{d_0+10^1d_1+...+10^{p-1}d_{p-1}}{c}\)</span> 为整数</td>
-<td
-style="text-align: center;">因为整数与整数的和为整数，整数与非整数的和为非整数；<br>如果 <span
-class="math inline">\(t\)</span> 为整数且 <span class="math inline">\(t
-+ \frac{d_0+10^1d_1+...+10_{p-1}d_{p-1}}{c}\)</span> 为整数，则 <span
-class="math inline">\(\frac{d_0+10^1d_1+...+10_{p-1}d_{p-1}}{c}\)</span> 必定为整数</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span
-class="math inline">\(\Rightarrow\)</span></td>
-<td style="text-align: center;"><span
-class="math inline">\(n\)</span> 可被 <span
-class="math inline">\(c\)</span> 整除 <span
-class="math inline">\(\Leftrightarrow\)</span> <span
-class="math inline">\((d_0+10^1d_1+...+10^{p-1}d_{p-1})\)</span> 可被
-<span class="math inline">\(c\)</span> 整除</td>
-<td style="text-align: center;">因为 <span
-class="math inline">\(\frac{n}{c}\)</span> 和 <span
-class="math inline">\(\frac{d_0+10^1d_1+...+10_{p-1}d_{p-1}}{c}\)</span> 都为整数</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span
-class="math inline">\(\Rightarrow\)</span></td>
-<td style="text-align: center;">(<span
-class="math inline">\(n\)</span> 可被 <span
-class="math inline">\(c\)</span> 整除) <span
-class="math inline">\(\Leftrightarrow\)</span> (<span
-class="math inline">\(n\)</span> 的最后 <span
-class="math inline">\(p\)</span> 位数字的值可被 <span
-class="math inline">\(c\)</span> 整除)</td>
-<td style="text-align: center;">因为<span
-class="math inline">\((d_0+10^1d_1+...+10^{p-1}d_{p-1})\)</span>为<span
-class="math inline">\(n\)</span> 最后 <span
-class="math inline">\(p\)</span> 位数的值</td>
-</tr>
-</tbody>
-</table>
 <p><span class="math display">\[
 \begin{aligned}
-\Rightarrow \quad &amp; n \text{ 可被写作 }d_k d_{k-1}...d_{p}...d_1d_0
-\text{ 的形式，}
-d_i \in \{ x  \vert  0 \leq x \leq 9 \}
-&amp;&amp;&amp; \text{根据我们记录数字的方法} \\
-\Rightarrow \quad &amp; n = d_0+10^1d_1+...+ 10^{p}{d}_p+...+10^kd_k
-&amp;&amp;&amp; \text{根据十位数的定义} \\
-\Rightarrow \quad &amp; n = d_0+10^1d_1+...+
-10^{p}({d}_p+...+10^{k-p}d_k) &amp;&amp;&amp; \text{因式分解出}10^p \\
-\Rightarrow \quad &amp; n = d_0+10^1d_1+...+ (c \cdot
-k)({d}_p+...+10^{k-p}d_k) &amp;&amp;&amp;
-\text{因为}c \mid 10^p \Rightarrow 10^p = c \cdot k, \ k \in \mathbb{Z}
-\\
-\Rightarrow \quad &amp; \dfrac{n}{c} =
+\Rightarrow \ &amp; n \text{可被写作}d_k d_{k-1}...d_{p}...d_1d_0
+\text{的形式，} &amp;&amp; \text{根据我们记录数字的方法} \\
+&amp; d_i \in \{ x : 0 \leq x \leq 9 \} \\
+\Rightarrow \ &amp; n = d_0+10^1d_1+...+ 10^{p}{d}_p+...+10^kd_k
+&amp;&amp; \text{根据十位数的定义} \\
+\Rightarrow \ &amp; n = d_0+10^1d_1+...+ 10^{p}({d}_p+...+10^{k-p}d_k)
+&amp;&amp; \text{因式分解出}10^p \\
+\Rightarrow \ &amp; n = d_0+10^1d_1+...+ (c \cdot
+k)({d}_p+...+10^{k-p}d_k) &amp;&amp;
+\text{因为} c \mid 10^p \Rightarrow \\ &amp; &amp;&amp; 10^p = c \cdot
+k, \ k \in \mathbb{Z} \\
+\Rightarrow \ &amp; \dfrac{n}{c} =
 \dfrac{d_0+10^1d_1+...+10^{p-1}d_{p-1}}{c}+ k({d}_p+...+10^{k-p}d_k)
-&amp;&amp;&amp; \text{等式两边除以}c \\
-\Rightarrow \quad &amp; \dfrac{n}{c} =
+&amp;&amp; \text{等式两边除以}c \\
+\Rightarrow \ &amp; \dfrac{n}{c} =
 \dfrac{d_0+10^1d_1+...+10^{p-1}d_{p-1}}{c}+t, \ t \in \mathbb{Z}
-&amp;&amp;&amp;
-\text{因为整数的积与和为整数，且}\\ &amp; &amp;&amp;&amp; k, 10^{k-p},
+&amp;&amp;
+\text{因为整数的积与和为整数，且}\\ &amp; &amp;&amp; k, 10^{k-p},
 d_p,...,d_k \in \mathbb{Z} \\
-\Rightarrow \quad &amp; \dfrac{n}{c} \text{为整数} \Leftrightarrow
-\frac{d_0+10^1d_1+...+10^{p-1}d_{p-1}}{c}+t
-\text{ 为整数} &amp;&amp;&amp; 因为等式两边相等 \\
-\Rightarrow \quad &amp; \dfrac{n}{c} 为整数 \Leftrightarrow
-\dfrac{d_0+10^1d_1+...+10^{p-1}d_{p-1}}{c} 为整数
-&amp;&amp;&amp; 因为整数与整数的和为整数， \\ &amp; &amp;&amp;&amp;
-整数与非整数的和为非整数；
-\\ &amp; &amp;&amp;&amp; 如果 \ t \ 和 \ t +
-\frac{d_0+10^1d_1+...+10_{p-1}d_{p-1}}{c} \ 为整数
-\\ &amp; &amp;&amp;&amp; 则 \frac{d_0+10^1d_1+...+10_{p-1}d_{p-1}}{c}
-必定为整数 \\
-\Rightarrow \quad &amp; n \ 可被 \ c \ 整除 \Leftrightarrow
-(d_0+10^1d_1+...+10^{p-1}d_{p-1}) \ 可被 \ c \ 整除
-&amp;&amp;&amp; 因为 \ \frac{n}{c} \ 和 \
-\frac{d_0+10^1d_1+...+10_{p-1}d_{p-1}}{c} \ 都为整数 \\
-\Rightarrow \quad &amp; n \ 可被 \ c \ 整除 \Leftrightarrow n \ 的最后 \
-p \ 位数字的值可被 \ c \ 整除
-&amp;&amp;&amp; 因为 \ d_0+10^1d_1+...+10^{p-1}d_{p-1} \\ &amp;
-&amp;&amp;&amp; 为 \ n \ 的最后 \ p \ 位数字
+\Rightarrow \ &amp; \dfrac{n}{c} \text{为整数} \Leftrightarrow
+\frac{d_0+10^1d_1+...+10^{p-1}d_{p-1}}{c}+t \ (1)
+\text{为整数} &amp;&amp; 因为等式两边相等 \\
+\Rightarrow \ &amp; \dfrac{n}{c} 为整数 \Leftrightarrow
+\dfrac{d_0+10^1d_1+...+10^{p-1}d_{p-1}}{c} \ (2) 为整数
+&amp;&amp; 因为整数与整数的和为整数，
+\\ &amp; &amp;&amp; 整数与非整数的和为非整数；
+\\ &amp; &amp;&amp; 如果 t 和 (1) 为整数
+\\ &amp; &amp;&amp; 则 (2) 必定为整数 \\
+\Rightarrow \ &amp; n可被c整除 \Leftrightarrow
+d_0+10^1d_1+...+10^{p-1}d_{p-1} \ (3) 可被 c 整除
+&amp;&amp; 因为 \tfrac{n}{c} 和 (2) 都为整数 \\
+\Rightarrow \ &amp; n 可被 c 整除 \Leftrightarrow n 的最后 p
+位数字的值可被 c 整除
+&amp;&amp; 因为 (3) 为 n 的最后 p 位 \\ &amp; &amp;&amp; 数字
 \end{aligned}
 \]</span></p>
 
@@ -515,6 +395,15 @@ p \ 位数字的值可被 \ c \ 整除
             <div>
               <div class="post-metas mb-3">
                 
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%AF%81%E6%98%8E/">证明</a>
+                    
+                  </div>
                 
               </div>
               
