@@ -24,9 +24,9 @@
 <meta property="og:description" content="PS1 Problem 1 断言：令 \(n, \ c, \ p \in \mathbb{Z}\)，且 \(c\) 整除 \(10^p\)。则有 \(c\) 整除 \(n\) 当且仅当 \(c\) 整除 \(n\) 的最后 \(p\) 位数字的值。 名词解释：  当且仅当：如果 \(p \Rightarrow q\) 且 \(q \Rightarrow p\)，则可得 \(p \L">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-05T12:26:22.000Z">
-<meta property="article:modified_time" content="2023-12-06T00:12:38.605Z">
+<meta property="article:modified_time" content="2023-12-07T15:20:51.172Z">
 <meta property="article:author" content="Rerto6">
-<meta property="article:tag" content="数学">
+<meta property="article:tag" content="离散数学">
 <meta property="article:tag" content="证明">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -204,7 +204,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.8k 字
+      3.1k 字
     </span>
   
 
@@ -213,7 +213,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      16 分钟
+      27 分钟
     </span>
   
 
@@ -389,6 +389,124 @@ d_0+10^1d_1+...+10^{p-1}d_{p-1} \ (2) 可被 c 整除
 &amp;&amp; 因为 (2) 为 n 的最后 p 位 \\ &amp; &amp;&amp; 数字
 \end{aligned}
 \]</span></p>
+<h4 id="反例反证">反例反证</h4>
+<p><strong>断言更改</strong>：令 <span class="math inline">\(n,c \geq 1,
+\ p \geq 2 \in \mathbb{Z}\)</span>，且 <span
+class="math inline">\(c\)</span> 整除 <span
+class="math inline">\(10^p\)</span>。则有 <span
+class="math inline">\(c\)</span> 整除 <span
+class="math inline">\(n\)</span> 当且仅当 <span
+class="math inline">\(c\)</span> 整除 <span
+class="math inline">\(n\)</span> 的最后 <span class="math inline">\(p -
+1\)</span> 位数字的值。</p>
+<p><strong>名词解释</strong>：</p>
+<ul>
+<li><strong>反例反证（Disproof by
+Counterexample）</strong>：对于任意全称命题（Universal
+Claim）的反证，可以使用单个反例来举例证明。</li>
+</ul>
+<p><strong>反例</strong>：<span class="math inline">\(n = 52936, \ p =
+2, \ c = 4\)</span></p>
+<p><strong>代入验证</strong>：</p>
+<table>
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 3%" />
+<col style="width: 5%" />
+<col style="width: 3%" />
+<col style="width: 11%" />
+<col style="width: 9%" />
+<col style="width: 10%" />
+<col style="width: 16%" />
+<col style="width: 34%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span
+class="math inline">\(n\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(p\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(10^p\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(c\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(c \mid
+10^p?\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(c \mid
+n?\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(n\)</span>的最后<span
+class="math inline">\(p-1\)</span>位数</th>
+<th style="text-align: center;"><span class="math inline">\(c \mid
+n\)</span> 的最后<span class="math inline">\(p-1\)</span>位数？</th>
+<th style="text-align: center;"><span class="math inline">\(c \mid n
+\Leftrightarrow c \mid n\)</span> 的最后<span
+class="math inline">\(p-1\)</span>位数？</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\(52936\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(2\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(100\)</span></td>
+<td style="text-align: center;"><span
+class="math inline">\(4\)</span></td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;"><span
+class="math inline">\(6\)</span></td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ps1-problem-2">PS1 Problem 2</h3>
+<p><strong>断言</strong>：令 <span class="math inline">\(n\)</span>
+为任意整数，则 <span class="math inline">\(n^4 + 10n^3 + 23n^2 +
+14n\)</span> 可被 <span class="math inline">\(4\)</span> 整除。</p>
+<p><strong>证明</strong>：我们考虑以下两种情况</p>
+<ul>
+<li><strong>情况1</strong>：<span class="math inline">\(n\)</span>
+为偶数 <span class="math inline">\(\Rightarrow\)</span> <span
+class="math inline">\(n = 2k, \ k \in \mathbb{Z}\)</span></li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}
+原式 &amp; = (2k)^4 + 10(2k)^3 + 23(2k)^2 + 14(2k) &amp;&amp; 替换n为2k
+\\
+&amp; = 16k^4 + 80k^3 + 92k^2 + 28k \\
+&amp; = 4k(4k^3+20k^2+23k + 7) \\
+&amp; = 4t, \ t \in \mathbb{Z} &amp;&amp; 因为整数的积与和必定为整数 \\
+&amp; &amp;&amp; 且k, \ 4, \ 20, \ 34, \ 7 \in \mathbb{Z} \\
+&amp; \Rightarrow n^4+10n^3+23n^2+14n 可被 4 整除 &amp;&amp;
+根据整除的定义 \\
+&amp; &amp;&amp; (n = a \cdot k, \ k \in \mathbb{Z} \Rightarrow a \mid
+n)
+\end{aligned}
+\]</span></p>
+<ul>
+<li><strong>情况2</strong>：n 为奇数 <span
+class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(n
+= 2k + 1, \ k \in \mathbb{Z}\)</span></li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}
+原式 &amp; = (2k+1)^4 + 10(2k+1)^3 + 23(2k+1)^2 + 14(2k+1) &amp;&amp;
+替换n为2k + 1 \\
+&amp; = 16k^4 + 112k^3 + 236k^2 + 188k + 48 \\
+&amp; = 4(4k^4+28k^3+59k^2+47k+12) \\
+&amp; = 4t, t \in \mathbb{Z} &amp;&amp; 因为整数的积与和必定为整数 \\
+&amp; &amp;&amp; 且k, \ 4, \ 28, \ 59, \ 47, \ 12 \in \mathbb{Z} \\
+&amp; \Rightarrow n^4+10n^3+23n^2+14n 可被 4 整除 &amp;&amp;
+根据整除的定义 \\
+&amp; &amp;&amp; (n = a \cdot k, \ k \in \mathbb{Z} \Rightarrow a \mid
+n)
+\end{aligned}
+\]</span></p>
+<p>对于任意整数而言，它不是奇数就是偶数，所以情况的选择是详尽的。</p>
 
             </div>
             <hr>
@@ -399,7 +517,7 @@ d_0+10^1d_1+...+10^{p-1}d_{p-1} \ (2) 可被 c 整除
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+                      <a class="hover-with-bg" href="/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/">离散数学</a>
                     
                       <a class="hover-with-bg" href="/tags/%E8%AF%81%E6%98%8E/">证明</a>
                     
